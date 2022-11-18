@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #161616;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 27px;
+    background: url(./image/bar.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+.toggle.active {
+    background: url();
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+.showcase {
+    height: 100hv;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #666;
+    mix-blend-mode: overlay;
+}
+.text {
+    position: relative;
+    z-index: 10;
+}
+.text h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+.text p {
+    font-size: 1.1rem;
+    color: rgb(240, 236, 236, 0.7);
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+button {
+    background: linear-gradient(#0f0c29,#302b63,#24243e);
+   position: relative;
+   display: inline-block;
+   padding: 25px 30px;
+   margin: 40px 0;
+   color: #03e9f4;
+   font-size: 24px;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   transition: 0.5s;
+   letter-spacing: 4px;
+   border-radius: 10px;
+}
+button:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+}
+button span {
+    position: absolute;
+    display: block ;
+}
+button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
+}
+button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul {
+    position: relative;
+}
+menu ul li {
+    list-style: none;
+    margin: 20px;
+}
+menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu ul li a:hover{
+    color: aqua;
+}
+
+@media (max-width:991px){
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+    .text h3{
+        font-size: 2rem;
+    }
+}
+
+.data{
+    text-align: left;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 73px;
+    color: #fff;
+}
+.data_JSON {
+    text-align: left;
+    color: aqua;
+}
